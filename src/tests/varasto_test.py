@@ -63,7 +63,7 @@ class TestVarasto(unittest.TestCase):
         otettu = self.varasto.ota_varastosta(-10)
         self.assertEqual(otettu, 0)
 
-    def test_ota_varastosta_maara_suurempi_kuin_saldo(self):
+    def test_ota_varastosta_maara_enemman_kuin_saldo(self):
         self.varasto.lisaa_varastoon(10)
         otettu = self.varasto.ota_varastosta(100)
         self.assertEqual(otettu, 10)
